@@ -114,7 +114,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 	pVar = 16;
 	pType = 17;
 	pProcedure = 18;
-	pBegin = 19;
+	pElsif = 19;
 	pIf = 20;
 	pCase = 21;
 	pWhile = 22;

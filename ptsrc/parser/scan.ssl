@@ -71,7 +71,7 @@ Output :
 	pVar
 	pType
 	pProcedure
-	pBegin
+	pElsif
 	pIf
 	pCase
 	pWhile
