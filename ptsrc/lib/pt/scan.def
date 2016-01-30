@@ -22,13 +22,17 @@
 	lRightBracket = 16;
 	lLeftBrace = 17;
 	lRightBrace = 18;
-	lBlank = 19;
-	lIllegal = 20;
-	lNewLine = 21;
-	lTab = 22;
-	lNewPage = 23;
-	lEndFile = 24;
-	lastCharClass = 24;
+	lSlash = 19;
+	lHash = 20;
+	lExclamation = 21;
+	lAt = 22;
+	lBlank = 23;
+	lIllegal = 24;
+	lNewLine = 25;
+	lTab = 26;
+	lNewPage = 27;
+	lEndFile = 28;
+	lastCharClass = 28;
 
 	{ Output Tokens }
 	pDiv = 0;
@@ -100,14 +104,14 @@
 
 	{ S/SL Rule Table Addresses } {
 	Scan = 0;
-	Identifier = 215;
-	AlternateComment = 320;
-	Integer = 232;
-	Literal = 247;
-	Comment = 291;
+	Identifier = 231;
+	AlternateComment = 336;
+	Integer = 248;
+	Literal = 263;
+	Comment = 307;
 	}
 
 	{ S/SL Table Parameters }
-	sslTblSize = 356;
+	sslTblSize = 372;
 	minSslTableValue = -32767;
 	maxSslTableValue = 32767;

@@ -69,13 +69,17 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 	lRightBracket = 16;
 	lLeftBrace = 17;
 	lRightBrace = 18;
-	lBlank = 19;
-	lIllegal = 20;
-	lNewLine = 21;
-	lTab = 22;
-	lNewPage = 23;
-	lEndFile = 24;
-	lastCharClass = 24;
+	lSlash = 19;
+	lHash = 20;
+	lExclamation = 21;
+	lAt = 22;
+	lBlank = 23;
+	lIllegal = 24;
+	lNewLine = 25;
+	lTab = 26;
+	lNewPage = 27;
+	lEndFile = 28;
+	lastCharClass = 29;
 
 { ===== }
 
@@ -818,6 +822,10 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 	    charClassMap[ord(']')] := lRightBracket;
 	    charClassMap[ord('{')] := lLeftBrace;
 	    charClassMap[ord('}')] := lRightBrace;
+		charClassMap[ord('/')] := lSlash;
+		charClassMap[ord('#')] := lHash;
+		charClassMap[ord('!')] := lExclamation;
+		charClassMap[ord('@')] := lAt;
 
 	    { Initialize the scan ssl table }
 	    reset(scanSsl {, NscanSsl} );

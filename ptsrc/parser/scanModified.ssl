@@ -185,6 +185,7 @@ Scan :
 		.pEquals
 	    | '+':
 		.pPlus
+
 	    | lQuote:
 		@Literal
 	    | '-':
