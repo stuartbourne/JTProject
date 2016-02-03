@@ -57,26 +57,31 @@ Output :
 	pOr
 	pAnd
 	pNot
-	pThen
 	pElse
 	pOf
-	pEnd
-	pUntil
-	pDo
 	pArray
 	pFile
 	pPacked
 	pProgram
-	pConst
 	pVar
 	pType
-	pProcedure
-	pElsif
 	pIf
 	pCase
-	pWhile
-	pRepeat
-	lastKeywordToken = pRepeat
+	pLet
+	pFunction
+	pSwitch
+	pDefault
+	pElsif
+	pLoop
+	pBreak
+	pWhen
+	pClass
+	pPublic
+	pHash
+	pAt
+	pLeftBrace
+	pRightBrace
+	lastKeywordToken = pRightBrace
 
 	% Scanner tokens -
 	%   These are the tokens actually recognized by the Scanner itself.
@@ -96,13 +101,13 @@ Output :
 	pPlus
 	pMinus
 	pStar
-	pColonEquals
 	pDot
 	pComma
 	pSemicolon
 	pColon
 	pEquals
 	pNotEqual
+	pDoubleEquals
 	pLess
 	pLessEqual
 	pGreaterEqual
@@ -150,12 +155,13 @@ Scan :
 	    | ';':
 		.pSemicolon
 	    | '(':
-		[
-		    | '*':
-			@AlternateComment
-		    | *:
-			.pLeftParen
-		]
+		.pLeftParen
+		%[ Don't need old alternate comment method
+		%    | '*':
+		%	@AlternateComment
+		%    | *:
+		%	.pLeftParen
+		%]
 	    | ')':
 		.pRightParen
 	    | '[':
@@ -165,12 +171,7 @@ Scan :
 	    | ',':
 		.pComma
 	    | ':':
-		[
-		    | '=':
-			.pColonEquals
-		    | *:
-			.pColon
-		]
+		.pColon
 	    | lDigit:
 		oBufferSave
 		@Integer
@@ -180,9 +181,18 @@ Scan :
 			oBufferSave
 			@Identifier
 		    | *:
-		]
+		] 
+	    | '#':
+		.pHash
+	    | '@':
+		.pAt
 	    | '=':
-		.pEquals
+		[
+		    | '=':
+			.pDoubleEquals
+		    | *:
+			.pEquals
+		]
 	    | '+':
 		.pPlus
 	    | lQuote:
@@ -196,10 +206,15 @@ Scan :
 		    | *:
 			.pDot
 		]
+	    | '!':
+		[
+		    | '=':
+			.pNotEqual
+		    | *:
+			#eIllegalChar
+		]
 	    | '<':
 		[
-		    | '>':
-			.pNotEqual
 		    | '=':
 			.pLessEqual
 		    | *:
@@ -212,20 +227,23 @@ Scan :
 		    | *:
 			.pGreater
 		]
-	    | '/':
-		%To Do: Implement something!
-	    | '#':
-
-	    | '!':
-		
-	    | '@':
-
-	    | '{':
-		@Comment
+	    | '{':% Don't need old comment styles
+		.pLeftBrace
+	    | '}':
+		.pRightBrace
+	    | '/': % new comment styles
+		[
+		    | '*': %multiline comments
+			@BlockComment
+		    | '/':%single line comments
+			@Comment
+		    | *:%single slash does not compute
+			#eIllegalChar
+		]
 	    | '*':
 		.pStar
 	    | lNewPage:
-	    | lIllegal, '}':
+	    | lIllegal:
 		#eIllegalChar
 	    | lEndFile:
 		.pEndFile
@@ -280,25 +298,21 @@ Literal :
 
 Comment :
 	% Discard the contents of a comment
-
 	{[
-	    | '}':
-		>
-	    | lNewLine:
-		.pNewLine
-	    | lEndFile:		% comment must be closed before EOF
-		#eCommentEOF
+	    | lEndFile: %Comment could be last line of the program 
 		.pEndFile
+		>
+	    | lNewLine: %comment in most cases ended by a new line
+		.pNewLine
 		>
 	    | *:	% comment may contain any other character
 		?
 	]};
-
-AlternateComment :
+BlockComment :
 	{[
 	    | '*':
 		[
-		    | ')':
+		    | '/':
 			>
 		    | *:
 		]

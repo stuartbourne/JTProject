@@ -50,38 +50,37 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 
 	{ Input Tokens }
 	lLetter = 0;
-	firstCharClass = 0;
-	lDigit = 1;
-	lPlus = 2;
-	lMinus = 3;
-	lStar = 4;
-	lColon = 5;
-	lEquals = 6;
-	lDot = 7;
-	lComma = 8;
-	lSemicolon = 9;
-	lQuote = 10;
-	lLeftAngle = 11;
-	lRightAngle = 12;
-	lLeftParen = 13;
-	lRightParen = 14;
-	lLeftBracket = 15;
-	lRightBracket = 16;
-	lLeftBrace = 17;
-	lRightBrace = 18;
-	lSlash = 19;
-	lHash = 20;
-	lExclamation = 21;
-	lAt = 22;
-	lBlank = 23;
-	lIllegal = 24;
-	lNewLine = 25;
-	lTab = 26;
-	lNewPage = 27;
-	lEndFile = 28;
-	lastCharClass = 29;
-
-{ ===== }
+        firstCharClass = 0;
+        lDigit = 1;
+        lPlus = 2;
+        lMinus = 3;
+        lStar = 4;
+        lColon = 5;
+        lEquals = 6;
+        lDot = 7;
+        lComma = 8;
+        lSemicolon = 9;
+        lQuote = 10;
+        lLeftAngle = 11;
+        lRightAngle = 12;
+        lLeftParen = 13;
+        lRightParen = 14;
+        lLeftBracket = 15;
+        lRightBracket = 16;
+        lLeftBrace = 17;
+        lRightBrace = 18;
+        lSlash = 19;
+        lHash = 20;
+        lExclamation = 21;
+        lAt = 22;
+        lBlank = 23;
+        lIllegal = 24;
+        lNewLine = 25;
+        lTab = 26;
+        lNewPage = 27;
+        lEndFile = 28;
+        lastCharClass = 28;
+	{ ===== }
 
 
 	{ Scanner -> Parser token stream definitions }
@@ -94,59 +93,66 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 	copied here from scan.def or parser.def, which must agree!}
 
 	{ Output Tokens }
-	pDiv = 0;
-	firstKeywordToken = 0;
-	pMod = 1;
-	pOr = 2;
-	pAnd = 3;
-	pNot = 4;
-	pThen = 5;
-	pElse = 6;
-	pOf = 7;
-	pEnd = 8;
-	pUntil = 9;
-	pDo = 10;
-	pArray = 11;
-	pFile = 12;
-	pPacked = 13;
-	pProgram = 14;
-	pConst = 15;
-	pVar = 16;
-	pType = 17;
-	pProcedure = 18;
-	pElsif = 19;
-	pIf = 20;
-	pCase = 21;
-	pWhile = 22;
-	pRepeat = 23;
-	lastKeywordToken = 23;
-	pIdentifier = 24;
-	firstCompoundInputToken = 24;
-	pInteger = 25;
-	pLiteral = 26;
-	lastCompoundInputToken = 26;
-	pNewLine = 27;
-	pEndFile = 28;
-	pPlus = 29;
-	pMinus = 30;
-	pStar = 31;
-	pColonEquals = 32;
-	pDot = 33;
-	pComma = 34;
-	pSemicolon = 35;
-	pColon = 36;
-	pEquals = 37;
-	pNotEqual = 38;
-	pLess = 39;
-	pLessEqual = 40;
-	pGreaterEqual = 41;
-	pGreater = 42;
-	pLeftParen = 43;
-	pRightParen = 44;
-	pLeftBracket = 45;
-	pRightBracket = 46;
-	pDotDot = 47;
-	lastSyntaxToken = 47;
+	
+pDiv = 0;
+firstKeywordToken = 0;
+pMod = 1;
+pOr = 2;
+pAnd = 3;
+pNot = 4;
+pElse = 5;
+pOf = 6;
+pArray = 7;
+pFile = 8;
+pPacked = 9;
+pProgram = 10;
+pVar = 11;
+pType = 12;
+pIf = 13;
+pCase = 14;
+pLet = 15;
+pFunction = 16;
+pSwitch = 17;
+pDefault = 18;
+pElsif = 19;
+pLoop = 20;
+pBreak = 21;
+pWhen = 22;
+pClass = 23;
+pPublic = 24;
+pHash = 25;
+pAt = 26;
+        pLeftBrace = 27;
+        pRightBrace = 28;
+        lastKeywordToken = 28;
+        pIdentifier = 29;
+        firstCompoundInputToken = 29;
+        pInteger = 30;
+        pLiteral = 31;
+        lastCompoundInputToken = 31;
+        pNewLine = 32;
+        pEndFile = 33;
+        pPlus = 34;
+        pMinus = 35;
+        pStar = 36;
+        pDot = 37;
+        pComma = 38;
+        pSemicolon = 39;
+        pColon = 40;
+        pEquals = 41;
+        pNotEqual = 42;
+        pDoubleEquals = 43;
+        pLess = 44;
+        pLessEqual = 45;
+        pGreaterEqual = 46;
+pGreater = 47;
+pLeftParen = 48;
+pRightParen = 49;
+pLeftBracket = 50;
+pRightBracket = 51;
+pDotDot = 52;
+lastSyntaxToken = 52;
+
 
 { ===== }
 
@@ -300,7 +306,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 
 	{ The following value MUST match the total number of
 	  keywords and idents entered in the stdIdentifiers file. }
-	numberStdIdentifiers = 43;
+	numberStdIdentifiers = 44;
 
 	textBufferSize = 80;
 	identTableSize = 1601;	{ must be prime }
@@ -324,7 +330,6 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 	{ misc. }
 	tab = '	';
 	blank = ' ';
-	{quote = '''';}
 	quote = '"';
 	null = 0;
 
@@ -822,10 +827,10 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
 	    charClassMap[ord(']')] := lRightBracket;
 	    charClassMap[ord('{')] := lLeftBrace;
 	    charClassMap[ord('}')] := lRightBrace;
-		charClassMap[ord('/')] := lSlash;
-		charClassMap[ord('#')] := lHash;
-		charClassMap[ord('!')] := lExclamation;
-		charClassMap[ord('@')] := lAt;
+	    charClassMap[ord('/')] := lSlash;
+	    charClassMap[ord('!')] := lExclamation;
+	    charClassMap[ord('#')] := lHash;
+	    charClassMap[ord('@')] := lAt;
 
 	    { Initialize the scan ssl table }
 	    reset(scanSsl {, NscanSsl} );
@@ -1671,8 +1676,13 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source,
     { Main program ScannerParser }
     begin
 	Initialize;
-	Parser;
+	parseInputToken := pNewLine;
+	newInputLine := false;
+
+	while parseInputToken <> pEndFile do
+		AcceptSyntaxToken;
+	{Parser;}
 	{ No sense running semantic phase if serious syntax errors found }
-	if errorCount > 0 then
-	    rewrite(parseStream {, NparseStream} );
+	{if errorCount > 0 then
+	    rewrite(parseStream , NparseStream );}
     end.  { ScannerParser }

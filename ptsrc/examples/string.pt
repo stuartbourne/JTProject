@@ -1,0 +1,11 @@
+reset
+rewrite
+integer
+string
+boolean
+text
+integer
+string
+boolean
+text
+ "this is a string"
