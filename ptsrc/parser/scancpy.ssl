@@ -77,7 +77,11 @@ Output :
 	pWhen
 	pClass
 	pPublic
-	lastKeywordToken = pPublic
+	pHash
+	pAt
+	pLeftBrace
+	pRightBrace
+	lastKeywordToken = pRightBrace
 
 	% Scanner tokens -
 	%   These are the tokens actually recognized by the Scanner itself.
@@ -113,11 +117,7 @@ Output :
 	pLeftBracket
 	pRightBracket
 	pDotDot
-	pHash
-	pAt
-	pLeftBrace
-	pRightBrace
-	lastSyntaxToken = pRightBrace;
+	lastSyntaxToken = pDotDot;
 
 Error :
 	eIllegalChar = 5

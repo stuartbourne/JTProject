@@ -1,5 +1,3 @@
-reset
-rewrite
 integer
 string
 boolean
