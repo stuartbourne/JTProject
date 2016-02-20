@@ -1,0 +1,122 @@
+	{ Semantic Operations }
+	oBufferSave = 14;
+
+	{ Input Tokens }
+	lLetter = 0;
+	firstCharClass = 0;
+	lDigit = 1;
+	lPlus = 2;
+	lMinus = 3;
+	lStar = 4;
+	lColon = 5;
+	lEquals = 6;
+	lDot = 7;
+	lComma = 8;
+	lSemicolon = 9;
+	lQuote = 10;
+	lLeftAngle = 11;
+	lRightAngle = 12;
+	lLeftParen = 13;
+	lRightParen = 14;
+	lLeftBracket = 15;
+	lRightBracket = 16;
+	lLeftBrace = 17;
+	lRightBrace = 18;
+	lSlash = 19;
+	lHash = 20;
+	lExclamation = 21;
+	lAt = 22;
+	lBlank = 23;
+	lIllegal = 24;
+	lNewLine = 25;
+	lTab = 26;
+	lNewPage = 27;
+	lEndFile = 28;
+	lastCharClass = 28;
+
+	{ Output Tokens }
+	pDiv = 0;
+	firstKeywordToken = 0;
+	pMod = 1;
+	pOr = 2;
+	pAnd = 3;
+	pNot = 4;
+	pElse = 5;
+	pOf = 6;
+	pArray = 7;
+	pFile = 8;
+	pPacked = 9;
+	pProgram = 10;
+	pVar = 11;
+	pType = 12;
+	pIf = 13;
+	pCase = 14;
+	pLet = 15;
+	pFunction = 16;
+	pSwitch = 17;
+	pDefault = 18;
+	pElsif = 19;
+	pLoop = 20;
+	pBreak = 21;
+	pWhen = 22;
+	pClass = 23;
+	pPublic = 24;
+	lastKeywordToken = 24;
+	pIdentifier = 25;
+	firstCompoundInputToken = 25;
+	pInteger = 26;
+	pLiteral = 27;
+	lastCompoundInputToken = 27;
+	pNewLine = 28;
+	pEndFile = 29;
+	pPlus = 30;
+	pMinus = 31;
+	pStar = 32;
+	pDot = 33;
+	pComma = 34;
+	pSemicolon = 35;
+	pColon = 36;
+	pEquals = 37;
+	pNotEqual = 38;
+	pDoubleEquals = 39;
+	pLess = 40;
+	pLessEqual = 41;
+	pGreaterEqual = 42;
+	pGreater = 43;
+	pLeftParen = 44;
+	pRightParen = 45;
+	pLeftBracket = 46;
+	pRightBracket = 47;
+	pDotDot = 48;
+	pHash = 49;
+	pAt = 50;
+	pLeftBrace = 51;
+	pRightBrace = 52;
+	lastSyntaxToken = 52;
+
+	{ Input/Output Tokens }
+
+	{ Error Codes }
+	eIllegalChar = 5;
+	firstScanError = 5;
+	eLiteralLine = 6;
+	eLiteralEOF = 7;
+	eCommentEOF = 8;
+	eNoSeparator = 9;
+	lastScanError = 9;
+
+	{ Type Values }
+
+	{ S/SL Rule Table Addresses } {
+	Scan = 0;
+	Identifier = 252;
+	Integer = 269;
+	Literal = 284;
+	BlockComment = 351;
+	Comment = 328;
+	}
+
+	{ S/SL Table Parameters }
+	sslTblSize = 387;
+	minSslTableValue = -32767;
+	maxSslTableValue = 32767;

@@ -1,0 +1,17 @@
+Input for while.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for while.pt: 
+
+  .pIdentifier
+ .pNewLine
+ .pEndFile

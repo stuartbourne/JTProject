@@ -1,0 +1,13 @@
+Input for doubleEquals.pt: 
+
+ [ (lEquals)
+ [ (lEquals)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for doubleEquals.pt: 
+
+ .pDoubleEquals
+ .pNewLine
+ .pEndFile

@@ -1,0 +1,18 @@
+Input for public.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for public.pt: 
+
+  .pIdentifier (screened to pPublic)
+ .pNewLine
+ .pEndFile
