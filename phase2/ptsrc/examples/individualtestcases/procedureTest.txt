@@ -1,0 +1,21 @@
+Input for procedure.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for procedure.pt: 
+
+  .pIdentifier
+ .pNewLine
+ .pEndFile
