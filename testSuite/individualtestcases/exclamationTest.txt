@@ -1,0 +1,12 @@
+Input for exclamation.pt: 
+
+ [ (lExclamation)
+ [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for exclamation.pt: 
+
+ .pNewLine
+ .pEndFile

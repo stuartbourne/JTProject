@@ -1,0 +1,12 @@
+Input for slash.pt: 
+
+ [ (lSlash)
+ [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for slash.pt: 
+
+ .pNewLine
+ .pEndFile

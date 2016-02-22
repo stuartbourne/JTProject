@@ -1,0 +1,18 @@
+Input for string.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for string.pt: 
+
+  .pIdentifier
+ .pNewLine
+ .pEndFile

@@ -1,0 +1,17 @@
+Input for begin.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for begin.pt: 
+
+  .pIdentifier
+ .pNewLine
+ .pEndFile

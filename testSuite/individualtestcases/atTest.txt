@@ -1,0 +1,12 @@
+Input for at.pt: 
+
+ [ (lAt)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for at.pt: 
+
+ .pAt
+ .pNewLine
+ .pEndFile

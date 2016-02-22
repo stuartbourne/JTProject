@@ -1,0 +1,17 @@
+Input for elsif.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for elsif.pt: 
+
+  .pIdentifier (screened to pElsif)
+ .pNewLine
+ .pEndFile
