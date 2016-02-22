@@ -11,26 +11,25 @@ mod
 or
 and
 not
+then
 else
 of
+end
+until
+do
 array
 file
 packed
 program
+const
 var
 type
+procedure
+begin
 if
 case
-let
-function
-switch
-default
-elsif
-loop
-break
-when
-class
-public
+while
+repeat
 
 % End of keywords
 
@@ -40,7 +39,7 @@ public
 
 % Predeclared type names
 integer
-string
+char
 boolean
 text
 
