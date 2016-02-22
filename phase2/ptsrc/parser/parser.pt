@@ -161,60 +161,65 @@ lastSyntaxToken = 52;
 { ===== Semantic tokens, copied here from parser.def or semantic.def, which must agree!  }
 
 	{ Output Tokens }
-	sIdentifier = 0;
-	firstSemanticToken = 0;
-	firstCompoundSemanticToken = 0;
-	sInteger = 1;
-	sLiteral = 2;
-	lastCompoundSemanticToken = 2;
-	sProgram = 3;
-	sParmBegin = 4;
-	sParmEnd = 5;
-	sConst = 6;
-	sType = 7;
-	sVar = 8;
-	sProcedure = 9;
-	sBegin = 10;
-	sEnd = 11;
-	sNegate = 12;
-	sArray = 13;
-	sPacked = 14;
-	sFile = 15;
-	sRange = 16;
-	sCaseStmt = 17;
-	sCaseEnd = 18;
-	sLabelEnd = 19;
-	sExpnEnd = 20;
-	sNullStmt = 21;
-	sAssignmentStmt = 22;
-	sSubscript = 23;
-	sCallStmt = 24;
-	sFieldWidth = 25;
-	sIfStmt = 26;
-	sThen = 27;
-	sElse = 28;
-	sWhileStmt = 29;
-	sRepeatStmt = 30;
-	sRepeatEnd = 31;
-	sEq = 32;
-	sNE = 33;
-	sLT = 34;
-	sLE = 35;
-	sGT = 36;
-	sGE = 37;
-	sAdd = 38;
-	sSubtract = 39;
-	sMultiply = 40;
-	sDivide = 41;
-	sModulus = 42;
-	sInfixOr = 43;
-	sOr = 44;
-	sInfixAnd = 45;
-	sAnd = 46;
-	sNot = 47;
-	sNewLine = 48;
-	lastSemanticToken = 48;
-
+          sIdentifier = 0;
+        firstSemanticToken = 0;
+        firstCompoundSemanticToken = 0;
+        sInteger = 1;
+        sLiteral = 2;
+        lastCompoundSemanticToken = 2;
+        sProgram = 3;
+        sParmBegin = 4;
+        sParmEnd = 5;
+        sConst = 6;
+        sType = 7;
+        sVar = 8;
+        sProcedure = 9;
+        sBegin = 10;
+        sEnd = 11;
+        sNegate = 12;
+        sArray = 13;
+        sPacked = 14;
+        sFile = 15;
+        sRange = 16;
+        sCaseStmt = 17;
+        sCaseEnd = 18;
+        sLabelEnd = 19;
+        sExpnEnd = 20;
+        sNullStmt = 21;
+        sAssignmentStmt = 22;
+        sSubscript = 23;
+        sCallStmt = 24;
+        sFieldWidth = 25;
+        sIfStmt = 26;
+        sThen = 27;
+        sElse = 28;
+        sPublic = 29;
+        sDefault = 30;
+        sClass = 31;
+        sLoopStmt = 32;
+        sLoopBreakWhen = 33;
+        sLoopEnd = 34;
+        sSubstring = 35;
+        sLength = 36;
+        sEq = 37;
+        sNE = 38;
+        sLT = 39;
+        sLE = 40;
+        sGT = 41;
+        sGE = 42;
+        sAdd = 43;
+        sSubtract = 44;
+        sMultiply = 45;
+        sDivide = 46;
+        sModulus = 47;
+        sInfixOr = 48;
+        sOr = 49;
+        sInfixAnd = 50;
+        sAnd = 51;
+        sNot = 52;
+        sNewLine = 53;
+        lastSemanticToken = 53;
+	 
 { ===== }
 
 
@@ -1675,13 +1680,8 @@ lastSyntaxToken = 52;
     { Main program ScannerParser }
     begin
 	Initialize;
-	parseInputToken := pNewLine;
-	newInputLine := false;
-
-	while parseInputToken <> pEndFile do
-		AcceptSyntaxToken;
-	{Parser;}
+	Parser;
 	{ No sense running semantic phase if serious syntax errors found }
-	{if errorCount > 0 then
-	    rewrite(parseStream , NparseStream );}
+	if errorCount > 0 then
+	    rewrite(parseStream , NparseStream );
     end.  { ScannerParser }
