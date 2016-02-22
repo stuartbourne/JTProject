@@ -24,26 +24,27 @@ Input :
 	pOr			'or'
 	pAnd			'and'
 	pNot			'not'
-	pThen			'then'
 	pElse			'else'
 	pOf			'of'
-	pEnd			'end'
-	pUntil			'until'
-	pDo			'do'
 	pArray			'array'
 	pFile			'file'
 	pPacked			'packed'
 	pProgram		'program'
-	pConst			'const'
 	pVar			'var'
 	pType			'type'
-	pProcedure		'procedure'
-	pBegin			'begin'
 	pIf			'if'
 	pCase			'case'
-	pWhile			'while'
-	pRepeat			'repeat'
-	lastKeywordToken = pRepeat 
+	pLet			'let'
+	pFunction		'function'
+	pSwitch			'switch'
+	pDefault		'pDefault'
+	pElsif			'elsif'
+	pLoop			'loop'
+	pBreak			'break'
+	pWhen			'when'
+	pClass			'class'
+	pPublic			'public'
+	lastKeywordToken = pPublic
 
 	pIdentifier 
 	firstCompoundInputToken = pIdentifier
@@ -56,13 +57,13 @@ Input :
 	pPlus			'+'
 	pMinus			'-'
 	pStar			'*'
-	pColonEquals		':='
 	pDot			'.'
 	pComma			','
 	pSemicolon		';'
 	pColon			':'
 	pEquals			'='
-	pNotEqual		'<>'
+	pNotEqual		'!='
+	pDoubleEquals		'=='
 	pLess			'<'
 	pLessEqual		'<='
 	pGreaterEqual		'>='
@@ -72,7 +73,11 @@ Input :
 	pLeftBracket		'['
 	pRightBracket		']'
 	pDotDot			'..'
-	lastSyntaxToken = pDotDot;
+	pHash			'#'
+	pAt			'@'
+	pLeftBrace 		'{'
+	pRightBrace		'}'
+	lastSyntaxToken = pRightBrace;
 
 Output :
 	sIdentifier 
@@ -108,7 +113,6 @@ Output :
 	sIfStmt
 	sThen
 	sElse
-	{inserted new scanner tokens here}
 	sPublic
 	sDefault
 	sClass
@@ -117,7 +121,6 @@ Output :
 	sLoopEnd
 	sSubstring
 	sLength
-	{finished inserting new scanner tokens here}
 	sEq
 	sNE
 	sLT
