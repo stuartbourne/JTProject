@@ -1,0 +1,17 @@
+Input for class.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for class.pt: 
+
+  .pIdentifier (screened to pClass)
+ .pNewLine
+ .pEndFile

@@ -1,0 +1,3 @@
+program P (output) {
+	var a,b : integer;
+}

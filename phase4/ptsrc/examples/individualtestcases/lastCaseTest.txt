@@ -1,0 +1,170 @@
+Input for lastCase.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLeftParen)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lRightParen)
+ [ (lRightParen)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLeftParen)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lEquals)
+ [ (lEquals)
+ [ (lEquals)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lRightParen)
+ [ (lRightParen)
+ [ (lNewLine)
+ [ (lTab)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLeftParen)
+ [ (lLeftParen)
+ [ (lQuote)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lQuote)
+  [ (lRightParen)
+ [ (lRightParen)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLeftParen)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lEquals)
+ [ (lEquals)
+ [ (lLetter)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lRightParen)
+ [ (lRightParen)
+ [ (lNewLine)
+ [ (lTab)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLeftParen)
+ [ (lLeftParen)
+ [ (lQuote)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lLetter)
+  ? (lLetter)
+  [ (lQuote)
+  [ (lRightParen)
+ [ (lRightParen)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for lastCase.pt: 
+
+  .pIdentifier (screened to pProgram)
+  .pIdentifier
+ .pLeftParen
+  .pIdentifier
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+ .pLeftParen
+  .pIdentifier
+ .pDoubleEquals
+  .pIdentifier
+ .pRightParen
+ .pNewLine
+  .pIdentifier
+ .pLeftParen
+  .pLiteral
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pElsif)
+ .pLeftParen
+  .pIdentifier
+ .pEquals
+  .pIdentifier
+ .pRightParen
+ .pNewLine
+  .pIdentifier
+ .pLeftParen
+  .pLiteral
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+ .pNewLine
+ .pEndFile

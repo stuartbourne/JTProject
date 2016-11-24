@@ -1,0 +1,18 @@
+program caseTest(output)
+{
+	var i : integer;
+
+	i = 458
+	switch(i)
+	{
+		case 1:
+			write("one");
+		case 2:
+			write("two");
+		case 3:
+			write("three");
+		case 458:
+			write("My compiler works!");
+	}
+
+}

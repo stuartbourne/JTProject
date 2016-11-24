@@ -1,0 +1,7 @@
+program P (output)
+{	
+	public function P ()
+	{
+		let c = 27;
+	}	
+}

@@ -1,0 +1,6 @@
+program P (output)
+{	
+	var a : integer;
+		b : integer;
+		c : integer;
+}

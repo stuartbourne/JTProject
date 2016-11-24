@@ -1,0 +1,16 @@
+Input for loop.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for loop.pt: 
+
+  .pIdentifier (screened to pLoop)
+ .pNewLine
+ .pEndFile

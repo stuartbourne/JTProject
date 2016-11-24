@@ -1,0 +1,8 @@
+program P (output)
+{
+	var i,j : integer;
+	var str,str2 : string;
+	i = ord("s");
+	str = chr(56);
+
+}

@@ -1,0 +1,7 @@
+program P(output)
+{		
+	loop {
+	x = 2
+	break when x == 1
+	x = 1}
+}

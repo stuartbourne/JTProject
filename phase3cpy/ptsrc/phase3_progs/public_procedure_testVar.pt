@@ -1,0 +1,10 @@
+program P (output)
+{
+	class c
+	{
+		public function p (a:integer) 
+		{
+		
+		}
+	}
+}

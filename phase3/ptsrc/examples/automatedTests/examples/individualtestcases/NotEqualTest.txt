@@ -1,0 +1,13 @@
+Input for NotEqual.pt: 
+
+ [ (lExclamation)
+ [ (lEquals)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for NotEqual.pt: 
+
+ .pNotEqual
+ .pNewLine
+ .pEndFile

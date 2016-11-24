@@ -1,0 +1,9 @@
+Emitted tokens for string.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+

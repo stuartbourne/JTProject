@@ -1,0 +1,16 @@
+Input for when.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for when.pt: 
+
+  .pIdentifier (screened to pWhen)
+ .pNewLine
+ .pEndFile

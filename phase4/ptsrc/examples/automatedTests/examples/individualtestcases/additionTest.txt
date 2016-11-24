@@ -1,0 +1,183 @@
+Input for addition.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLeftParen)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lRightParen)
+ [ (lRightParen)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lNewLine)
+ [ (lTab)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lColon)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lTab)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lColon)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lTab)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lColon)
+ [ (lColon)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lTab)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lEquals)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lDigit)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lTab)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lEquals)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lDigit)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lTab)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lEquals)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lPlus)
+ [ (lPlus)
+ [ (lLetter)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for addition.pt: 
+
+  .pIdentifier (screened to pProgram)
+  .pIdentifier
+ .pLeftParen
+  .pIdentifier
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pVar)
+  .pIdentifier
+ .pColon
+  .pIdentifier
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pVar)
+  .pIdentifier
+ .pColon
+  .pIdentifier
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pVar)
+  .pIdentifier
+ .pColon
+  .pIdentifier
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+ .pEquals
+  .pInteger
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+ .pEquals
+  .pInteger
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+ .pEquals
+  .pIdentifier
+ .pPlus
+  .pIdentifier
+ .pSemicolon
+ .pNewLine
+ .pEndFile

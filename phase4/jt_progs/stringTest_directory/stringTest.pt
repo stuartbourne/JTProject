@@ -1,0 +1,13 @@
+program concatenateTest(output)
+{
+	var myString : String;
+	var myOtherString: String;	
+	var myNewString: String;
+
+	myString = "Hack Street's Back, ";
+	myOtherString = "ALL RIGHT";
+
+	myNewString = myString + myOtherString;
+	write(myNewString);
+	write(myNewString @ 1 : 4);
+}

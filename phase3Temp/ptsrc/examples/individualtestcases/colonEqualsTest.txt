@@ -1,0 +1,15 @@
+Input for colonEquals.pt: 
+
+ [ (lColon)
+ [ (lEquals)
+ [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for colonEquals.pt: 
+
+ .pColon
+ .pEquals
+ .pNewLine
+ .pEndFile

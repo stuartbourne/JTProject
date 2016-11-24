@@ -1,0 +1,5 @@
+program P (output)
+{	
+	type t : integer;
+		b : integer;
+}

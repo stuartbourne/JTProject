@@ -1,0 +1,9 @@
+Emitted tokens for oldCommentAlt.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+

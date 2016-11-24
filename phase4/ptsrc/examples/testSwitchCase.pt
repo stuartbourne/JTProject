@@ -1,0 +1,14 @@
+program P (output)
+{	
+	switch (i) {
+	case 42:
+	x=y;
+	break;
+	case 43:
+	x=y;
+	break;
+	default:
+	x=y;
+	break;
+}	
+}

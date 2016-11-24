@@ -1,0 +1,17 @@
+Input for break.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for break.pt: 
+
+  .pIdentifier (screened to pBreak)
+ .pNewLine
+ .pEndFile

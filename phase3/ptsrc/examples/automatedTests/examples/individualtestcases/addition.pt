@@ -1,0 +1,8 @@
+program addition ( output);
+
+	var x : integer;
+	var y : integer;
+	var z: integer;
+	x = 1;
+	y = 6;
+	z = x+y;

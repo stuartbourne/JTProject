@@ -1,0 +1,29 @@
+program classProg(output)
+{
+
+	class myClass
+	{
+		var myIntArray : array [1 .. 10] of integer;
+		var i : integer;
+
+		public function printVal(i : integer)
+		{
+			write(myIntArray[i])];
+		}
+
+		public function printArray()
+		{
+			i = 1;
+			loop
+			{
+				write(myIntArray[i]);
+				i = i + 1;
+				break when ( i == 10);
+				writeln();
+			}
+		} 
+	
+	}
+	printVal(8);
+	printArray();
+}

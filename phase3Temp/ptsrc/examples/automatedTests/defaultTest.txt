@@ -1,0 +1,9 @@
+Emitted tokens for default.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+

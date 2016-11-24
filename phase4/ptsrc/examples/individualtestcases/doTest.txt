@@ -1,0 +1,14 @@
+Input for do.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for do.pt: 
+
+  .pIdentifier
+ .pNewLine
+ .pEndFile

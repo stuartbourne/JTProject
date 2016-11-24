@@ -1,0 +1,12 @@
+ogram p (output) {
+	var i : integer;
+	i = 2;
+	switch(i)
+	{
+	case 1:
+		break;
+	case 2:
+		break;
+	}
+
+}

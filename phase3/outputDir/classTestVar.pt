@@ -1,0 +1,8 @@
+program P(output)
+{
+	class c
+	{
+		var p:integer;
+	}
+
+}

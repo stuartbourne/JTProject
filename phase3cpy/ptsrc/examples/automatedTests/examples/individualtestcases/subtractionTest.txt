@@ -1,0 +1,230 @@
+Input for subtraction.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLeftParen)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lRightParen)
+ [ (lRightParen)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lNewLine)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lColon)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lColon)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lColon)
+ [ (lColon)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lEquals)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lDigit)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lEquals)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lDigit)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lEquals)
+ [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lMinus)
+ [ (lMinus)
+ [ (lLetter)
+  [ (lSemicolon)
+ [ (lSemicolon)
+ [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for subtraction.pt: 
+
+  .pIdentifier (screened to pProgram)
+  .pIdentifier
+ .pLeftParen
+  .pIdentifier
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pVar)
+  .pIdentifier
+ .pColon
+  .pIdentifier
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pVar)
+  .pIdentifier
+ .pColon
+  .pIdentifier
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pVar)
+  .pIdentifier
+ .pColon
+  .pIdentifier
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+ .pEquals
+  .pInteger
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+ .pEquals
+  .pInteger
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+ .pEquals
+  .pIdentifier
+ .pMinus
+  .pIdentifier
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+ .pEndFile

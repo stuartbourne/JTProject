@@ -1,0 +1,9 @@
+Emitted tokens for begin.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+

@@ -1,0 +1,81 @@
+[H[2JOur Version
+
+   .tLiteralInteger
+   oEmitValue
+   .tLiteralAddress
+   oEmitDataAddress
+   .tFileDescriptor
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+
+ oSymbolTblPushScope
+ oCountPush(three)
+  oSymbolStkPushLocalIdentifier
+  oSymbolStkSetKind(syVariable)
+  oSymbolStkLinkToStandardType(stdText)
+  oTypeStkPushSymbol
+  oValuePush(two)
+   oAllocateAlignOnWord
+   oSymbolStkEnterDataAddress
+   oEmitValue
+   oEmitDataAddress
+   .tFileDescriptor
+   oAllocateDescriptor
+  oSymbolTblEnter
+  oSymbolStkPop
+  oTypeStkPop
+  oValuePop
+ oCountPop
+    oSymbolStkPushLocalIdentifier
+    oSymbolStkSetKind(syConstant)
+    oValuePushInteger
+    oSymbolStkLinkToStandardType(stdInteger)
+    oSymbolStkEnterValue
+    oValuePop
+    oSymbolTblEnter
+    oSymbolStkPop
+ oSymbolTblPopScope
+ oEmitTrapKind(trHalt)
+
+
+Cordys Version
+
+   .tLiteralInteger
+   oEmitValue
+   .tLiteralAddress
+   oEmitDataAddress
+   .tFileDescriptor
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+
+ oSymbolTblPushScope
+ oCountPush(three)
+  oSymbolStkPushLocalIdentifier
+  oSymbolStkSetKind(syVariable)
+  oSymbolStkLinkToStandardType(stdText)
+  oTypeStkPushSymbol
+  oValuePush(two)
+   oAllocateAlignOnWord
+   oSymbolStkEnterDataAddress
+   oEmitValue
+   oEmitDataAddress
+   .tFileDescriptor
+   oAllocateDescriptor
+  oSymbolTblEnter
+  oSymbolStkPop
+  oTypeStkPop
+  oValuePop
+ oCountPop
+    oSymbolStkPushLocalIdentifier
+    oSymbolStkSetKind(syConstant)
+    oValuePushInteger
+    oSymbolStkLinkToStandardType(stdInteger)
+    oSymbolStkEnterValue
+    oValuePop
+    oSymbolTblEnter
+    oSymbolStkPop
+ oSymbolTblPopScope
+ oEmitTrapKind(trHalt)
+

@@ -1,0 +1,18 @@
+Input for switch.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for switch.pt: 
+
+  .pIdentifier (screened to pSwitch)
+ .pNewLine
+ .pEndFile

@@ -1,0 +1,15 @@
+Input for let.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for let.pt: 
+
+  .pIdentifier (screened to pLet)
+ .pNewLine
+ .pEndFile

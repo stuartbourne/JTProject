@@ -1,0 +1,11 @@
+Input for singleQuote.pt: 
+
+ [ (lIllegal)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for singleQuote.pt: 
+
+ .pNewLine
+ .pEndFile

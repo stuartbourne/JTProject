@@ -1,0 +1,7 @@
+program testChar(output);
+
+var s : char;
+
+begin
+	s = "x";
+end

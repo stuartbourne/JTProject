@@ -1,0 +1,3 @@
+Printing Type Stack End 
+Printing Symbol Stack Stack Level: 1 | IdentTblRef: 21 | SymbolTblRef: 0 | Kind 8 | Value: 0 | TypeTblLink 
+0 End 

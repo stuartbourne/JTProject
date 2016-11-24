@@ -1,0 +1,26 @@
+program P (output)
+{
+	function printArray(var arr : integer[1..5] , var s : integer)
+	{	
+		var i : integer;
+		i = s;
+		loop{
+			write("arr[i]");
+			i = i-1;
+			break when (i == 0);
+		}
+	}
+	
+	var arr : array [1..5] of integer;
+	var s : integer;
+	s = 5;
+	
+	arr [1] = 1;
+	arr [2] = 2;
+	arr [3] = 3;
+	arr [4] = 4;
+	arr [5] = 5;
+	printArray(arr,s);
+
+
+}

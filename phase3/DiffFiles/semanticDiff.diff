@@ -1,0 +1,890 @@
+89,90c89
+< 	sEndOfFile
+<         lastInputToken = sEndOfFile;
+---
+>         lastInputToken = sNewLine;
+119c118
+< 	tFetchString
+---
+> 	tFetchChar
+124c123
+< 	tAssignString
+---
+> 	tAssignChar
+128c127
+< 	tStoreParmString
+---
+> 	tStoreParmChar
+133c132
+< 	tSubscriptString
+---
+> 	tSubscriptChar
+139,142d137
+< 	tConcatenate
+< 	tSubstring
+< 	tLength
+< 	tStringEqual
+144,151c139,141
+< 	tCaseElse
+< 	%tWhileBegin
+< 	%tRepeatBegin
+< 	%tRepeatControl
+< 	tLoopBegin
+< 	tLoopBreakWhen
+< 	tLoopTest
+< 	tLoopEnd
+---
+> 	tWhileBegin
+> 	tRepeatBegin
+> 	tRepeatControl
+164a155
+> 	tLiteralChar
+167,168c158,159
+< 	%tStringDescriptor
+< 	%tSkipString
+---
+> 	tStringDescriptor
+> 	tSkipString
+174,176c165,167
+< 	%tWhileTest
+< 	%tWhileEnd
+< 	%tRepeatTest
+---
+> 	tWhileTest
+> 	tWhileEnd
+> 	tRepeatTest
+238,239c229
+< 	wordSize = 4
+< 	stringSize = 1024;
+---
+> 	wordSize = 4;
+256,257c246
+< 	%pidChar
+< 	pidString
+---
+> 	pidChar
+285c274
+< 	stdString
+---
+> 	stdChar
+320c309
+<     oSymbolTblLookupExternal >> Boolean
+---
+>     oSymbolTblLookupExternal >> Boolean;
+324,327d312
+<     oSymbolTblStripScope
+< 	%Change all the identSymbolTableRefs for symbols in the 
+< 	%top scope to their symbolTblLink values, (remove them from 
+< 	%visibility even though they are still in table
+329,330c314
+<     oSymbolTblMergeScope;
+<     	%decrement the lexical level without changing any ident links
+---
+> 
+345,348c329
+< 	syUndefined
+< 	syClass
+< 	syPublicProcedure;
+< 
+---
+> 	syUndefined;
+447c428
+<     oSymbolStkPop
+---
+>     oSymbolStkPop;
+450d430
+<     oSymbolStkPrint;
+479,480c459
+< %	tpChar
+< 	tpString
+---
+> 	tpChar
+576c555
+<     oTypeStkPop
+---
+>     oTypeStkPop;
+579,582c558
+<     oTypeStkDuplicate
+< 	%Duplicate the top entry of the stack
+< 	
+<     oTypeStkPrint;
+---
+> 
+596c572
+< 	% trWriteString = 7
+---
+> 	trWriteString = 7
+597a574
+> 	trWriteChar = 9
+599,601c576
+< 	trReadString = 107
+< 	trWriteString = 108 %9
+< 	%trReadString
+---
+> 	trReadChar = 11
+882,883d856
+< 	    | sClass:
+< 		@ClassDefinitions
+890,892c863,864
+< ConstantDefinitions :		% Process named constant definitions 
+< %%%%%%%%%% I REMOVED THE LOOP, SO NOW IT ONLY SHOULD ACCEPT ONE IDENTIFIER PER CALL TO ConstantDefinitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+< 	[
+---
+> ConstantDefinitions :		% Process named constant definitions
+> 	{[
+896,897c868,869
+< %		>
+< 	];
+---
+> 		>
+> 	]};
+962c934
+< 			oSymbolStkLinkToStandardType(stdString)
+---
+> 			oSymbolStkLinkToStandardType(stdChar)
+967,970c939,941
+< 			%.tSkipString
+< 			%oFixPushForwardBranch
+< 			%oEmitNullAddress
+< 			.tAssignBegin
+---
+> 			.tSkipString
+> 			oFixPushForwardBranch
+> 			oEmitNullAddress
+977,978c948
+< 			.tAssignString
+< 			%oFixPopForwardBranch
+---
+> 			oFixPopForwardBranch
+981c951
+< 			oTypeStkLinkToStandardComponentType(stdString)
+---
+> 			oTypeStkLinkToStandardComponentType(stdChar)
+987c957
+< 		oValuePop       % Lower bound
+---
+> 		oValuePop	% Lower bound
+993,994c963
+< %%%%%%%%%%%%% ALL I DID WAS REMOVE THE "{","}" TO MAKE IT ONLY ALLOW ONE PER DEFINITION%%%%%%%%%%%%%%%%%%%%
+< 	[
+---
+> 	{[
+1044,1045c1013,1014
+< 	%	>
+< 	];
+---
+> 		>
+> 	]};
+1243c1212
+< 				@	ValuePushValuePlusOne
+---
+> 				@ValuePushValuePlusOne
+1265,1273d1233
+<        		sIdentifier
+< 		oCountPush(one)
+<                 oSymbolStkPushLocalIdentifier
+<                 [oSymbolStkChooseKind
+<                         |syUndefined, syExternal:
+<                         |*:
+<                                 #eMultiplyDefined
+<                 ]
+< 
+1275,1289c1235,1239
+<             | sVar:
+< 		sIdentifier
+< 		oCountIncrement
+< 		oSymbolStkPushLocalIdentifier
+< 		[oSymbolStkChooseKind
+< 			|syUndefined, syExternal:
+< 			|*:
+< 				#eMultiplyDefined
+< 		]
+< 	| sIdentifier:
+< 			>
+<         ]}
+< 
+< 	@VariableAttributes
+< 	oCountPop;
+---
+> 	    | sIdentifier:
+> 		@VariableAttributes
+> 	    | *:
+> 		>
+> 	]};
+1292,1300c1242,1247
+<         % Push the variable's structure and
+<         % component types onto the type stack
+<         @TypeBody
+<         
+< 	{[oCountChoose
+< 		|zero:
+< 			>
+< 		|*:
+< 		oCountDecrement
+---
+> 	oSymbolStkPushLocalIdentifier
+> 	[ oSymbolStkChooseKind
+> 	    | syUndefined, syExternal:
+> 	    | *:
+> 		#eMultiplyDefined
+> 		% The new definition will obscure the old one
+1302,1384c1249,1304
+< 	  [oSymbolStkChooseKind
+<             | syExternal:       % file parameter to program
+<                 oTypeStkSwap    % structure on top
+<                 [ oTypeStkChooseKind
+<                     | tpFile:
+<                         oSymbolStkSetKind(syVariable)
+<                         oTypeStkSwap    % component on top
+<                         [ oTypeStkChooseTypeReference
+<                             | no:       % no type table entry
+<                                 oTypeTblEnter
+<                             | *:
+<                         ]
+<                         oTypeStkEnterComponentReference
+<                         oTypeStkSwap    % structure on top
+<                         [ oTypeStkChooseTypeReference
+<                             | no:
+<                                 oTypeTblEnter
+<                             | *:
+<                         ]
+<                         oSymbolStkEnterTypeReference
+<                         % A symbol table entry was created for the file
+<                         % when its program parameter was accepted.
+<                         oSymbolTblUpdate
+<                     | *:
+<                         #eExternalDeclare       % Ignore this declaration
+<                 ]
+<             | *:                % new variable or redeclaration in this scope
+<                 oSymbolStkSetKind(syVariable)
+<                 oTypeStkSwap    % structure on top
+<                 [ oTypeStkChooseKind
+<                     | tpFile:
+<                         % an internal file
+<                         oSymbolStkSetKind(syVariable)
+<                         oTypeStkSwap    % component on top
+<                         [ oTypeStkChooseTypeReference
+<                             | no:       % no type table entry
+< 						      oTypeTblEnter
+<                             | *:
+<                         ]
+<                         oTypeStkEnterComponentReference
+<                         oTypeStkSwap    % structure on top
+<                         [ oTypeStkChooseTypeReference
+<                             | no:
+<                                 oTypeTblEnter
+<                             | *:
+<                         ]
+<                         oSymbolStkEnterTypeReference
+<                         oValuePush(zero)
+<                         @AllocateVar
+<                         oValuePop
+<                     | *:
+<                         @AllocateVar
+<                 ]
+< 
+<                 % Create type table entries for the object as necessary.
+<                 % Where named types were used in the declaration, a type
+<                 % reference will be present, otherwise the type reference
+<                 % fields will be null.
+<                 [ oTypeStkChooseKind
+<                     | tpArray, tpFile:
+<                         oTypeStkSwap    % component on top
+<                         [ oTypeStkChooseTypeReference
+<                             | no:       % no type table entry
+<                                 oTypeTblEnter
+<                             | *:
+<                         ]
+<                         oTypeStkEnterComponentReference
+<                         oTypeStkSwap    % structure on top
+<                     | *:
+<                 ]
+<                 [ oTypeStkChooseTypeReference
+<                     | no:
+<                         oTypeTblEnter
+<                     | *:
+<                 ]
+<                 oSymbolStkEnterTypeReference
+<                 oSymbolTblEnter
+< 		oSymbolStkPop
+< 		oTypeStkSwap
+<         ]}
+<         oTypeStkPop
+<         oTypeStkPop;
+< 
+---
+> 	% Push the variable's structure and
+> 	% component types onto the type stack
+> 	@TypeBody
+> 	[ oSymbolStkChooseKind
+> 	    | syExternal:	% file parameter to program
+> 		oTypeStkSwap	% structure on top
+> 		[ oTypeStkChooseKind
+> 		    | tpFile:
+> 			oSymbolStkSetKind(syVariable)
+> 			oTypeStkSwap	% component on top
+> 			[ oTypeStkChooseTypeReference
+> 			    | no:	% no type table entry
+> 				oTypeTblEnter
+> 			    | *:
+> 			]
+> 			oTypeStkEnterComponentReference
+> 			oTypeStkSwap	% structure on top
+> 			[ oTypeStkChooseTypeReference
+> 			    | no:
+> 				oTypeTblEnter
+> 			    | *:
+> 			]
+> 			oSymbolStkEnterTypeReference
+> 			% A symbol table entry was created for the file
+> 			% when its program parameter was accepted.
+> 			oSymbolTblUpdate
+> 		    | *:
+> 			#eExternalDeclare	% Ignore this declaration
+> 		]
+> 	    | *:		% new variable or redeclaration in this scope
+> 		oSymbolStkSetKind(syVariable)
+> 		oTypeStkSwap	% structure on top
+> 		[ oTypeStkChooseKind
+> 		    | tpFile:
+> 			% an internal file
+> 			oSymbolStkSetKind(syVariable)
+> 			oTypeStkSwap	% component on top
+> 			[ oTypeStkChooseTypeReference
+> 			    | no:	% no type table entry
+> 				oTypeTblEnter
+> 			    | *:
+> 			]
+> 			oTypeStkEnterComponentReference
+> 			oTypeStkSwap	% structure on top
+> 			[ oTypeStkChooseTypeReference
+> 			    | no:
+> 				oTypeTblEnter
+> 			    | *:
+> 			]
+> 			oSymbolStkEnterTypeReference
+> 			oValuePush(zero)
+> 			@AllocateVar
+> 			oValuePop
+> 		    | *:
+> 			@AllocateVar
+> 		]
+1385a1306,1332
+> 		% Create type table entries for the object as necessary.
+> 		% Where named types were used in the declaration, a type
+> 		% reference will be present, otherwise the type reference
+> 		% fields will be null.
+> 		[ oTypeStkChooseKind
+> 		    | tpArray, tpFile:
+> 			oTypeStkSwap	% component on top
+> 			[ oTypeStkChooseTypeReference
+> 			    | no:	% no type table entry
+> 				oTypeTblEnter
+> 			    | *:
+> 			]
+> 			oTypeStkEnterComponentReference
+> 			oTypeStkSwap	% structure on top
+> 		    | *:
+> 		]
+> 		[ oTypeStkChooseTypeReference
+> 		    | no:
+> 			oTypeTblEnter
+> 		    | *:
+> 		]
+> 		oSymbolStkEnterTypeReference
+> 		oSymbolTblEnter
+> 	]
+> 	oSymbolStkPop
+> 	oTypeStkPop
+> 	oTypeStkPop;
+1401a1349
+> 			oAllocateAlignOnWord
+1404c1352
+< 		    | tpString, tpBoolean:
+---
+> 		    | tpChar, tpBoolean:
+1442,1446c1390,1406
+< %%%%%%%%%% I THINK THIS WORKS BUT I HAVEN'T TESTED%%%%%%%%%
+< ClassDefinitions :
+< 	sIdentifier
+< 	oSymbolStkPushLocalIdentifier
+< 	oSymbolStkSetKind(syClass)
+---
+> 
+> ProcedureDefinition :
+> 	sIdentifier  oSymbolStkPushLocalIdentifier	% procedure name
+> 	[ oSymbolStkChooseKind
+> 	    | syUndefined:
+> 	    | syExternal:
+> 		% Program parameters must be declared as file variables
+> 		#eExternalDeclare
+> 	    | *:
+> 		#eMultiplyDefined
+> 		% New definition obscures old one.
+> 	]
+> 	.tSkipProc	% Branch around the procedure definition
+> 	oFixPushForwardBranch
+> 	oEmitNullAddress
+> 	oSymbolStkSetKind(syProcedure)
+> 	oSymbolStkEnterCodeAddress
+1447a1408
+> 	oTypeStkSetRecursionFlag(yes)
+1451c1412,1413
+< 	oSymbolTblPushScope
+---
+> 	oSymbolTblPushScope	% procedure scope
+> 	@ProcedureHeading
+1452a1415,1416
+> 	.tProcedureEnd
+> 	oFixPopForwardBranch	% fix skip around procedure
+1454a1419
+> 	oTypeStkSetRecursionFlag(no)
+1457,1460c1422
+< 	oSymbolTblStripScope
+< 	oSymbolTblMergeScope;
+< 
+< %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+---
+> 	oSymbolTblPopScope;
+1462,1499d1423
+< ProcedureDefinition :
+< 
+<         sIdentifier  oSymbolStkPushLocalIdentifier      % procedure name
+<         [ oSymbolStkChooseKind
+<             | syUndefined:
+<             | syExternal:
+<                 % Program parameters must be declared as file variables
+<                 #eExternalDeclare
+<             | *:
+<                 #eMultiplyDefined
+<                 % New definition obscures old one.
+<         ]
+<         [
+<             | sPublic:
+<                 oSymbolStkSetKind(syPublicProcedure)
+<             | *:
+<                 oSymbolStkSetKind(syProcedure)
+<         ]
+<         .tSkipProc      % Branch around the procedure definition
+<         oFixPushForwardBranch
+<         oEmitNullAddress
+<         oSymbolStkEnterCodeAddress
+<         oTypeStkPush(tpNull)
+<         oTypeStkSetRecursionFlag(yes)
+<         oTypeTblEnter
+<         oSymbolStkEnterTypeReference
+<         oSymbolTblEnter
+<         oSymbolTblPushScope     % procedure scope
+<         @ProcedureHeading
+<         @Block
+<         .tProcedureEnd
+<         oFixPopForwardBranch    % fix skip around procedure
+<         oSymbolTblUpdate
+<         oSymbolStkPop
+<         oTypeStkSetRecursionFlag(no)
+<         oTypeTblUpdate
+<         oTypeStkPop
+<         oSymbolTblPopScope;
+1514c1438
+< 		sIdentifier oSymbolStkPushLocalIdentifier
+---
+> 		sIdentifier  oSymbolStkPushLocalIdentifier
+1532d1455
+< 
+1534,1535c1457,1458
+<         % A local procedure's formal parameters must
+<         % be declared using named types.
+---
+> 	% A local procedure's formal parameters must
+> 	% be declared using named types.
+1537,1577c1460,1499
+<         sIdentifier  oSymbolStkPushIdentifier   % formal parameter type
+<         .tStoreParmInteger
+<         [ oSymbolStkChooseKind
+<             | syUndefined:
+<                 #eUndefinedIdentifier
+<             | *:
+<         ]
+<         [ oSymbolStkChooseKind
+<             | syType:
+<             | *:
+<                 #eTypeIdentifierReqd
+<                 oSymbolStkPop
+<                 @SymbolStkPushIntegerType
+<         ]
+<         oTypeStkPushSymbol
+<         oSymbolStkPop   % type symbol
+<         [ oSymbolStkChooseKind
+<             | syVariable:
+<                 [ oTypeStkChooseKind
+<                     | tpArray, tpFile:
+<                         #eNonScalarValParm
+<                         oTypeStkPop
+<                         @SymbolStkPushIntegerType
+<                         oTypeStkPushSymbol
+<                         oSymbolStkPop
+<                     | *:
+<                 ]
+<             | *:
+<         ]
+<         oSymbolStkEnterTypeReference
+<         [ oTypeStkChooseKind
+<             | tpArray:
+<                 oTypeStkPushComponent
+<             | *:
+<                 oTypeStkPush(tpNull)    % dummy component type
+<         ]
+<         oTypeStkSwap    % structure on top
+<         @AllocateVar    % allocate formal parameter
+<         oSymbolTblEnter;
+<         % No type table entry is needed since the type
+<         % must have been specified by named type.
+---
+> 	sIdentifier  oSymbolStkPushIdentifier	% formal parameter type
+> 	[ oSymbolStkChooseKind
+> 	    | syUndefined:
+> 		#eUndefinedIdentifier
+> 	    | *:
+> 	]
+> 	[ oSymbolStkChooseKind
+> 	    | syType:
+> 	    | *:
+> 		#eTypeIdentifierReqd
+> 		oSymbolStkPop
+> 		@SymbolStkPushIntegerType
+> 	]
+> 	oTypeStkPushSymbol
+> 	oSymbolStkPop	% type symbol
+> 	[ oSymbolStkChooseKind
+> 	    | syVariable:
+> 		[ oTypeStkChooseKind
+> 		    | tpArray, tpFile:
+> 			#eNonScalarValParm
+> 			oTypeStkPop
+> 			@SymbolStkPushIntegerType
+> 			oTypeStkPushSymbol
+> 			oSymbolStkPop
+> 		    | *:
+> 		]
+> 	    | *:
+> 	]
+> 	oSymbolStkEnterTypeReference
+> 	[ oTypeStkChooseKind
+> 	    | tpArray:
+> 		oTypeStkPushComponent
+> 	    | *:
+> 		oTypeStkPush(tpNull)	% dummy component type
+> 	]
+> 	oTypeStkSwap	% structure on top
+> 	@AllocateVar	% allocate formal parameter
+> 	oSymbolTblEnter;
+> 	% No type table entry is needed since the type
+> 	% must have been specified by named type.
+1604,1605c1526,1527
+< 			    | tpString:
+< 				.tStoreParmString
+---
+> 			    | tpChar:
+> 				.tStoreParmChar
+1632,1633d1553
+< 	    |sLoopStmt:
+< 		@LoopStmt
+1666,1667c1586,1587
+< 	    | tpString:
+< 		.tAssignString
+---
+> 	    | tpChar:
+> 		.tAssignChar
+1803c1723
+< 		    | tpInteger, tpSubrange, tpString, tpBoolean:
+---
+> 		    | tpInteger, tpSubrange, tpChar, tpBoolean:
+1848,1864c1768,1770
+< %WhileStmt :
+< %	.tWhileBegin
+< %	oFixPushTargetAddress		% top-of-loop branch target
+< %	@BooleanControlExpression
+< %	.tWhileTest
+< %	oFixPushForwardBranch
+< %	oEmitNullAddress		% exit branch
+< %	oFixSwap		% top-of-loop target back on top
+< %	@Statement
+< %	.tWhileEnd
+< %	oFixPopTargetAddress
+< %	oFixPopForwardBranch;
+< 
+< LoopStmt :
+< 	sBegin
+< 	.tLoopBegin
+< 	oFixPushTargetAddress
+---
+> WhileStmt :
+> 	.tWhileBegin
+> 	oFixPushTargetAddress		% top-of-loop branch target
+1866,1868c1772
+< 	@Statement
+< 	sLoopBreakWhen %%%%%%%%%%%%
+< 	.tLoopTest
+---
+> 	.tWhileTest
+1870,1871c1774,1775
+< 	oEmitNullAddress
+< 	oFixSwap
+---
+> 	oEmitNullAddress		% exit branch
+> 	oFixSwap		% top-of-loop target back on top
+1873c1777
+< 	.tLoopEnd
+---
+> 	.tWhileEnd
+1877,1878d1780
+< 
+< 
+1903,1912d1804
+< 		.tCaseEnd
+< 		oFixPopForwardBranch
+< 		oEmitCaseBranchTable
+< 		>
+< 	    | sDefault:
+< 		.tCaseEnd
+< 		oFixPopForwardBranch
+< 		oEmitCaseBranchTable
+< 		@CaseAlternative
+< 		sCaseEnd
+1916a1809,1811
+> 	.tCaseEnd
+> 	oFixPopForwardBranch
+> 	oEmitCaseBranchTable
+1998,2001d1892
+< 	%%%ADDED BY BEN AND STORUS 
+< 	    @TernaryOperator
+< 	oSymbolStkPrint
+< 	oTypeStkPrint	
+2049,2054c1940,1945
+< 			oTypeStkPush(tpString)
+< 		   % | one:
+< 		   %	oSymbolStkPush(syExpression)
+< 		   %	oTypeStkPush(tpChar)
+< 		   %	.tLiteralChar
+< 		   %	oEmitString
+---
+> 			oTypeStkPush(tpChar)
+> 		    | one:
+> 			oSymbolStkPush(syExpression)
+> 			oTypeStkPush(tpChar)
+> 			.tLiteralChar
+> 			oEmitString
+2059c1950
+< 			%.tSkipString
+---
+> 			.tSkipString
+2070c1961
+< 			%.tStringDescriptor
+---
+> 			.tStringDescriptor
+2074c1965
+< 			oTypeStkLinkToStandardComponentType(stdString)
+---
+> 			oTypeStkLinkToStandardComponentType(stdChar)
+2084,2091d1974
+< StringLengthCompareTypes:
+< 	oTypeStkSwap
+< 	[oTypeStkChooseKind
+< 		|tpString,tpPackedArray:
+< 		|*:
+< 			#eTypeMismatch
+< 	];
+< 
+2097d1979
+< 		@CompareAndSwapTypes
+2101,2105d1982
+< 		@CompareAndSwapTypes
+< 	    |sLength:
+< 		.tLength
+< 		oTypeStkPush(tpInteger)
+< 		@StringLengthCompareTypes	
+2120,2131c1997,1998
+< 		[oTypeStkChooseKind
+< 			| tpString :
+< 				.tConcatenate
+< 				oTypeStkPush(tpString)
+< 			| tpPackedArray :
+< 				.tConcatenate
+< 				oTypeStkPush(tpPackedArray)
+< 			|*:
+< 				.tAdd
+< 				oTypeStkPush(tpInteger)
+< 		]
+< 		%%%TypeStkPush(tpInteger)	% result type
+---
+> 		.tAdd
+> 		oTypeStkPush(tpInteger)	% result type
+2182,2191d2048
+< TernaryOperator:
+< 	[
+< 		| sSubstring:
+< 			.tSubstring
+< 			oTypeStkPush(tpString)
+< 			@CompareTernaryOperandAndResultTypes
+< 		| *:
+< 
+< 	];
+< 
+2206c2063
+< 	    | tpString:
+---
+> 	    | tpChar:
+2209c2066
+< 		    | tpString, tpPackedArray:
+---
+> 		    | tpChar:
+2230c2087
+< 		    | tpPackedArray, tpString:
+---
+> 		    | tpPackedArray:
+2243,2279d2099
+< 
+< 
+< 
+< 
+< 
+< CompareAndSwapTypesTernaryWithInt:
+< 	[oTypeStkChooseKind
+< 		|tpString:
+< 			oTypeStkSwap
+< 			[oTypeStkChooseKind
+< 				| tpInteger:
+< 				|*:
+< 					#eTypeMisMatch
+< 			]
+< 	];
+< 
+< CompareAndSwapTypesTernary:
+< 	[oTypeStkChooseKind
+< 		|tpString:
+< 			oTypeStkSwap
+< 			[oTypeStkChooseKind
+< 				| tpString,tpPackedArray:
+< 				|*:
+< 					#eTypeMisMatch
+< 			]
+< 	];
+< 
+< 
+< CompareTernaryOperandAndResultTypes:
+< 	%compare the three operand types and result for substring
+< 	@CompareAndSwapTypesTernaryWithInt
+< 	oTypeStkPop	%Compare Result string to int
+< 	@CompareAndSwapTypesTernaryWithInt
+< 	oTypeStkPop	%compare result string to int
+< 	@CompareAndSwapTypesTernary
+< 	oTypeStkPop;	%compare result string to big string
+< 
+2307c2127
+< 	    | tpString:
+---
+> 	    | tpChar:
+2310c2130
+< 		    | tpString:
+---
+> 		    | tpChar:
+2385,2386c2205,2206
+< 		    | tpString:
+< 			.tSubscriptString
+---
+> 		    | tpChar:
+> 			.tSubscriptChar
+2392c2212
+< 		    | tpInteger, tpSubrange, tpString, tpBoolean:
+---
+> 		    | tpInteger, tpSubrange, tpChar, tpBoolean:
+2405,2406c2225,2226
+< %%%%%%%%	    | tpChar:
+< %%%%%%%%		.tLiteralChar
+---
+> 	    | tpChar:
+> 		.tLiteralChar
+2409,2410c2229,2230
+< 	    %| tpPackedArray:	% always a named literal string
+< 	    %	.tStringDescriptor
+---
+> 	    | tpPackedArray:	% always a named literal string
+> 		.tStringDescriptor
+2424,2425c2244,2245
+< 	    | tpString:
+< 		.tFetchString
+---
+> 	    | tpChar:
+> 		.tFetchChar
+2460c2280
+< 		oTypeStkPush(tpString)
+---
+> 		oTypeStkPush(tpChar)
+2466c2286
+< 			    | tpString:
+---
+> 			    | tpChar:
+2652c2472
+< 				.tSubscriptString
+---
+> 				.tSubscriptChar
+2660c2480
+< 				    | tpString:
+---
+> 				    | tpChar:
+2723c2543
+< 				    | tpString:
+---
+> 				    | tpChar:
+2743c2563
+< 						    .tSubscriptString
+---
+> 						    .tSubscriptChar
+2834c2654
+< 				.tSubscriptString
+---
+> 				.tSubscriptChar
+2876c2696
+< 			.tSubscriptString
+---
+> 			.tSubscriptChar
+2910c2730
+< 		    | tpString:
+---
+> 		    | tpChar:
+2923c2743
+< 	    | tpString:
+---
+> 	    | tpChar:
+2925c2745
+< 		oEmitTrapKind(trWriteString)
+---
+> 		oEmitTrapKind(trWriteChar)
+2932c2752
+< 		    | tpString:
+---
+> 		    | tpChar:
+3033c2853
+< 				    | tpString:
+---
+> 				    | tpChar:
+3101c2921
+< 				    | tpString:
+---
+> 				    | tpChar:
+3242c3062
+< 	    | tpString:
+---
+> 	    | tpChar:
+3244c3064
+< 		oEmitTrapKind(trReadString)
+---
+> 		oEmitTrapKind(trReadChar)
+3321c3141
+< 				    | tpString:
+---
+> 				    | tpChar:
+3411c3231
+< 	oSymbolStkLinkToStandardType(stdString);
+---
+> 	oSymbolStkLinkToStandardType(stdChar);

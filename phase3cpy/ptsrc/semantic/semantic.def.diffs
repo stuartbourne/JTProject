@@ -1,0 +1,14 @@
+c213 226
+	tIfThen = 65;
+	tIfMerge = 66;
+	tCaseSelect = 67;
+	tCaseMerge = 68;
+	tCaseEnd = 69;
+	tSkipProc = 70;
+	tCallEnd = 71;
+	tLineNumber = 72;
+	tTrap = 73;
+	lastCompoundOutputToken = 73;
+	tEndOfFile = 74;
+	lastOutputToken = 74;
+.

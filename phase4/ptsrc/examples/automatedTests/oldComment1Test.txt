@@ -1,0 +1,9 @@
+Emitted tokens for oldComment1.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+

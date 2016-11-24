@@ -1,0 +1,8 @@
+program P(output)
+{
+     if (x == y)
+	z = w;
+     else
+	z = 1;
+}
+

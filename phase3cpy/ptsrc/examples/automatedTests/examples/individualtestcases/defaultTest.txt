@@ -1,0 +1,19 @@
+Input for default.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for default.pt: 
+
+  .pIdentifier (screened to pDefault)
+ .pNewLine
+ .pEndFile

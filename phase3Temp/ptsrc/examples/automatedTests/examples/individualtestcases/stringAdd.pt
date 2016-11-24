@@ -1,0 +1,9 @@
+progam stringadd ( output );
+/*This is a very simple program *
+which prints "hello world"
+*/
+begin // shouldn't be a keyword anymore
+var str : string;
+write(str);
+writeln
+end.

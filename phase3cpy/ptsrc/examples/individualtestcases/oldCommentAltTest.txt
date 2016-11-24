@@ -1,0 +1,58 @@
+Input for oldCommentAlt.pt: 
+
+ [ (lLeftParen)
+ [ (lStar)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lStar)
+ [ (lRightParen)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for oldCommentAlt.pt: 
+
+ .pLeftParen
+ .pStar
+  .pIdentifier
+  .pIdentifier
+  .pIdentifier
+  .pIdentifier
+  .pIdentifier
+  .pIdentifier
+ .pStar
+ .pRightParen
+ .pNewLine
+ .pEndFile

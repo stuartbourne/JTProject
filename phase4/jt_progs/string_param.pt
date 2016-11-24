@@ -1,0 +1,10 @@
+program P (input,output)
+{
+	function foo (var str: string)
+	{
+		write (str);
+	}
+	var a : string;
+	a = "Hello World";
+	foo(a);
+}

@@ -1,0 +1,18 @@
+Input for then.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for then.pt: 
+
+  .pIdentifier
+ .pNewLine
+ .pNewLine
+ .pEndFile

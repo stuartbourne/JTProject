@@ -1,0 +1,11 @@
+Input for doubleQuote.pt: 
+
+ [ (lQuote)
+  [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for doubleQuote.pt: 
+
+  .pNewLine
+ .pEndFile

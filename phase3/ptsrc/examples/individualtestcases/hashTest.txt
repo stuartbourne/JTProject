@@ -1,0 +1,12 @@
+Input for hash.pt: 
+
+ [ (lHash)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for hash.pt: 
+
+ .pHash
+ .pNewLine
+ .pEndFile

@@ -1,0 +1,19 @@
+program ifTest(output)
+{
+	var i : integer;
+
+	i = 0;
+	loop{
+		if (i/2 == 2)
+		{
+			write("number is 4");	
+		}
+		else
+		{
+			write(i);
+		}
+		i = i + 1;
+		break when (i == 10);
+	}
+
+}

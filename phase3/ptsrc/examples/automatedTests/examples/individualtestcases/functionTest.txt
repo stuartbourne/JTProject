@@ -1,0 +1,20 @@
+Input for function.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for function.pt: 
+
+  .pIdentifier (screened to pFunction)
+ .pNewLine
+ .pEndFile

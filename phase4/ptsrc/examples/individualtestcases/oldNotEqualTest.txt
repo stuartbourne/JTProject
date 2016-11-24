@@ -1,0 +1,16 @@
+Input for oldNotEqual.pt: 
+
+ [ (lLeftAngle)
+ [ (lRightAngle)
+ [ (lRightAngle)
+ [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for oldNotEqual.pt: 
+
+ .pLess
+ .pGreater
+ .pNewLine
+ .pEndFile

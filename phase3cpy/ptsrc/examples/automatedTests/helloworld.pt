@@ -1,0 +1,8 @@
+progam helloworld ( output );
+/*This is a very simple program *
+which prints "hello world"
+*/
+begin // shouldn't be a keyword anymore
+write("hello world");
+writeln
+end.

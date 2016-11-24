@@ -1,0 +1,9 @@
+Emitted tokens for public.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+

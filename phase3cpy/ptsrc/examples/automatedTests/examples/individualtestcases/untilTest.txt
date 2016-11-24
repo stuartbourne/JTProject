@@ -1,0 +1,17 @@
+Input for until.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for until.pt: 
+
+  .pIdentifier
+ .pNewLine
+ .pEndFile

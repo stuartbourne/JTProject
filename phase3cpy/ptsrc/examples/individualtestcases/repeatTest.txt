@@ -1,0 +1,18 @@
+Input for repeat.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for repeat.pt: 
+
+  .pIdentifier
+ .pNewLine
+ .pEndFile

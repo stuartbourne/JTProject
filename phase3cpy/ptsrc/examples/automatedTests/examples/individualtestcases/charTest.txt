@@ -1,0 +1,16 @@
+Input for char.pt: 
+
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lNewLine)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for char.pt: 
+
+  .pIdentifier
+ .pNewLine
+ .pEndFile

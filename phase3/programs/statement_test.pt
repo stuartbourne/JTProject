@@ -1,0 +1,5 @@
+program P (output)
+{
+	var s : integer;
+	s = 5;
+}

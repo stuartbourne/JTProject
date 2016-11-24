@@ -1,0 +1,9 @@
+Emitted tokens for when.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+

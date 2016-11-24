@@ -1,0 +1,4 @@
+Printing Symbol Stack Stack Level: 2 | IdentTblRef: 0 | SymbolTblRef: 0 | Kind 7 | Value: 0 | TypeTblLink 
+0 Stack Level: 1 | IdentTblRef: 21 | SymbolTblRef: 19 | Kind 2 | Value: 4 | TypeTblLink 
+2 End 
+Printing Type Stack Stack Level: 2 | TypeTblRef: 0 | Kind: 5 | Component Link: 2 Stack Level: 1 | TypeTblRef: 2 | Kind: 1 | Component Link: 0 End 

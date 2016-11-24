@@ -1,0 +1,7 @@
+program P (output) 
+{	
+	writeln();
+	write("Hello World");
+	writeln();
+	writeln();
+}

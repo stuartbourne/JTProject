@@ -1,0 +1,160 @@
+	{ Semantic Operations }
+
+	{ Input Tokens }
+	pDiv = 0;
+	firstKeywordToken = 0;
+	pMod = 1;
+	pOr = 2;
+	pAnd = 3;
+	pNot = 4;
+	pElse = 5;
+	pOf = 6;
+	pArray = 7;
+	pFile = 8;
+	pPacked = 9;
+	pProgram = 10;
+	pVar = 11;
+	pType = 12;
+	pIf = 13;
+	pCase = 14;
+	pLet = 15;
+	pFunction = 16;
+	pSwitch = 17;
+	pDefault = 18;
+	pElsif = 19;
+	pLoop = 20;
+	pBreak = 21;
+	pWhen = 22;
+	pClass = 23;
+	pPublic = 24;
+	lastKeywordToken = 24;
+	pIdentifier = 25;
+	firstCompoundInputToken = 25;
+	pInteger = 26;
+	pLiteral = 27;
+	lastCompoundInputToken = 27;
+	pNewLine = 28;
+	pEndFile = 29;
+	pPlus = 30;
+	pMinus = 31;
+	pStar = 32;
+	pDot = 33;
+	pComma = 34;
+	pSemicolon = 35;
+	pColon = 36;
+	pEquals = 37;
+	pNotEqual = 38;
+	pDoubleEquals = 39;
+	pLess = 40;
+	pLessEqual = 41;
+	pGreaterEqual = 42;
+	pGreater = 43;
+	pLeftParen = 44;
+	pRightParen = 45;
+	pLeftBracket = 46;
+	pRightBracket = 47;
+	pDotDot = 48;
+	pHash = 49;
+	pAt = 50;
+	pLeftBrace = 51;
+	pRightBrace = 52;
+	lastSyntaxToken = 52;
+
+	{ Output Tokens }
+	sIdentifier = 0;
+	firstSemanticToken = 0;
+	firstCompoundSemanticToken = 0;
+	sInteger = 1;
+	sLiteral = 2;
+	lastCompoundSemanticToken = 2;
+	sProgram = 3;
+	sParmBegin = 4;
+	sParmEnd = 5;
+	sConst = 6;
+	sType = 7;
+	sVar = 8;
+	sProcedure = 9;
+	sBegin = 10;
+	sEnd = 11;
+	sNegate = 12;
+	sArray = 13;
+	sPacked = 14;
+	sFile = 15;
+	sRange = 16;
+	sCaseStmt = 17;
+	sCaseEnd = 18;
+	sLabelEnd = 19;
+	sExpnEnd = 20;
+	sNullStmt = 21;
+	sAssignmentStmt = 22;
+	sSubscript = 23;
+	sCallStmt = 24;
+	sFieldWidth = 25;
+	sIfStmt = 26;
+	sThen = 27;
+	sElse = 28;
+	sPublic = 29;
+	sDefault = 30;
+	sClass = 31;
+	sLoopStmt = 32;
+	sLoopBreakWhen = 33;
+	sEndLoop = 34;
+	sSubstring = 35;
+	sLength = 36;
+	sEq = 37;
+	sNE = 38;
+	sLT = 39;
+	sLE = 40;
+	sGT = 41;
+	sGE = 42;
+	sAdd = 43;
+	sSubtract = 44;
+	sMultiply = 45;
+	sDivide = 46;
+	sModulus = 47;
+	sInfixOr = 48;
+	sOr = 49;
+	sInfixAnd = 50;
+	sAnd = 51;
+	sNot = 52;
+	sNewLine = 53;
+	lastSemanticToken = 53;
+
+	{ Input/Output Tokens }
+
+	{ Error Codes }
+
+	{ Type Values }
+
+	{ S/SL Rule Table Addresses } {
+	Program = 0;
+	Block = 34;
+	ConstantDefinitions = 112;
+	TypeDefinitions = 200;
+	VariableDeclarations = 331;
+	ProcedureHeading = 364;
+	BeginStmt = 536;
+	ConstantValue = 138;
+	UnsignedIntegerConstant = 180;
+	TypeBody = 230;
+	SimpleType = 282;
+	OptionallySignedIntegerConstant = 311;
+	SubVar = 336;
+	Statement = 418;
+	AssignmentOrCallStmt = 452;
+	IfStmt = 562;
+	LoopStmt = 666;
+	CaseStmt = 596;
+	Expression = 706;
+	CallStmt = 492;
+	CaseExpn = 661;
+	SimpleExpression = 760;
+	Term = 813;
+	Factor = 857;
+	IdentifierExtension = 915;
+	}
+
+	{ S/SL Table Parameters }
+	sslTblSize = 945;
+	minSslTableValue = -32767;
+	maxSslTableValue = 32767;

@@ -1,0 +1,6 @@
+program p (output) {
+	var s : string;
+	var x : string;
+	s = "string";
+	x = s @ 1 : 2;	
+}

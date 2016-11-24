@@ -1,0 +1,12 @@
+program P(input, output)
+{
+	var i : integer;
+
+	i = 0;
+	loop
+	{
+		break when (i == 10);
+		write(i);
+		i = i + 1;
+	}
+}

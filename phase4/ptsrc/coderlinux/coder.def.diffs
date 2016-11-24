@@ -1,0 +1,137 @@
+c8 78
+	oOperandPushBoolean = 20;
+	oOperandPushJumpCondition = 21; { (15) }
+	oOperandChooseJumpCondition = 22; { >>15 }
+	oOperandPushStringDescriptor = 23;
+	oOperandPushProcedure = 24;
+	oOperandPushTrap = 25;
+	oOperandPushCaseLow = 26;
+	oOperandPushCaseHigh = 27;
+	oOperandPushArrayLowerBound = 28;
+	oOperandPushArrayUpperBound = 29;
+	oOperandPushCopy = 30;
+	oOperandPushTemp = 31;
+	oOperandSetMode = 32; { (16) }
+	oOperandSetLength = 33; { (13) }
+	oOperandSetRegnum = 34; { (13) }
+	oOperandChooseLength = 35; { >>13 }
+	oOperandSetValue = 36; { (13) }
+	oOperandChooseValue = 37; { >>13 }
+	oOperandChooseManifestValue = 38; { >>13 }
+	oOperandIsValueNegative = 39; { >>14 }
+	oOperandEnterValueFromCaseTableAddress = 40;
+	oOperandEnterValueFromCodeAddress = 41;
+	oOperandEnterValueFromStringLength = 42;
+	oOperandEnterValueFromDataAreaSize = 43;
+	oOperandCompareLeftAndRight = 44; { >>14 }
+	oOperandCompareRightAndDest = 45; { >>14 }
+	oOperandIsJumpCondition = 46; { >>14 }
+	oOperandComplementJumpCondition = 47;
+	oOperandAddManifestValues = 48;
+	oOperandSubtractManifestValues = 49;
+	oOperandMultiplyManifestValues = 50;
+	oOperandNegateManifestValue = 51;
+	oOperandCompareManifestValues = 52; { >>14 }
+	oOperandMergeShuntsWithAddress = 53;
+	oOperandMergeShunts = 54;
+	oOperandFoldManifestSubscript = 55;
+	oOperandSwap = 56;
+	oOperandSwapRightAndDest = 57;
+	oOperandSwapLeftAndDest = 58;
+	oOperandPop = 59;
+	oFixPushAddress = 60;
+	oFixPushLastAddress = 61;
+	oFixSwapAddresses = 62;
+	oFixAndFreeShuntList = 63;
+	oFixAndFreeFalseBranches = 64;
+	oFixForwardBranch = 65;
+	oFixPopAddress = 66;
+	oEmitProcLabel = 67; { (16) }
+	oEmitNone = 68; { (17) }
+	oEmitSingle = 69; { (17) }
+	oEmitDouble = 70; { (17) }
+	oEmitString = 71;
+	oEmitStringLength = 72;
+	oEmitConditionalForwardBranch = 73;
+	oEmitUnconditionalForwardBranch = 74;
+	oEmitConditionalBackwardBranch = 75;
+	oEmitUnconditionalBackwardBranch = 76;
+	oEmitSourceCoordinate = 77;
+	oEmitMergeSourceCoordinate = 78;
+	oEmitCaseMergeBranch = 79;
+	oEmitCaseBranchTable = 80;
+	oCasePush = 81;
+	oCasePop = 82;
+	oCaseEnterTCodeAddress = 83;
+	oCaseEnterVariantAddress = 84;
+	oCaseEnterMergeAddress = 85;
+	oCaseEnterAbortAddress = 86;
+	oArrayEnterLowerBound = 87;
+	oArrayEnterUpperBound = 88;
+	oOptionTestChecking = 89; { >>14 }
+.
+c82
+	firstOutputToken = 0;
+.
+c106
+	tFetchString = 24;
+.
+c111
+	tAssignString = 29;
+.
+c115
+	tStoreParmString = 33;
+.
+c120
+	tSubscriptString = 38;
+.
+c126 153
+	tConcatenate = 44;
+	tSubstring = 45;
+	tLength = 46;
+	tStringEqual = 47;
+	tCaseBegin = 48;
+	tCaseElse = 49;
+	tLoopBegin = 50;
+	tLoopBreakWhen = 51;
+	tLoopTest = 52;
+	tLoopEnd = 53;
+	tCallBegin = 54;
+	tParmEnd = 55;
+	tProcedureEnd = 56;
+	tWriteBegin = 57;
+	tReadBegin = 58;
+	tTrapBegin = 59;
+	tWriteEnd = 60;
+	tReadEnd = 61;
+	tLiteralAddress = 62;
+	firstCompoundOutputToken = 62;
+	tLiteralInteger = 63;
+	tLiteralBoolean = 64;
+	tLiteralString = 65;
+	tIfThen = 66;
+	tIfMerge = 67;
+	tCaseSelect = 68;
+	tCaseMerge = 69;
+	tCaseEnd = 70;
+.
+c158
+	lastCompoundOutputToken = 74;
+.
+c160
+	lastOutputToken = 75;
+.
+d192
+a201
+	trAssignString = 101;
+	trChrString = 102;
+	trConcatenate = 103;
+	trSubstring = 104;
+	trLength = 105;
+	trStringEqual = 106;
+	trReadTring = 107;
+	trWriteString = 108;
+.
+a203
+	string = 3;
+.

@@ -1,0 +1,10 @@
+program p(output) {
+	var a: integer;
+
+	loop {
+
+		break when (a == 2);
+		a = 2;
+	}
+
+}

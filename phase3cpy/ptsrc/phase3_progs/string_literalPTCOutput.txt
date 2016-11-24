@@ -1,0 +1,1 @@
+line 2: syntax error at: hi line 2: extraneous program text - ignored

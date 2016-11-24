@@ -1,0 +1,6 @@
+program lastCase (output);
+if (true==true)
+	write("true");
+elsif (true=false)
+	write("false");
+writeln

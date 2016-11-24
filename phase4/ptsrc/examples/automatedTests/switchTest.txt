@@ -1,0 +1,9 @@
+Emitted tokens for switch.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+

@@ -1,0 +1,30 @@
+program P (input,output)
+{
+	var string1 : string;
+	var string2 : string;
+	var string3 : string;
+	function checkLength (var s: string)
+	{
+		if (#s == 0)
+		{
+			write("The string is empty");
+		}
+		
+		if (#s == 1)
+		{
+			write("The string is the character: " + s);
+		}
+		else
+		{
+			write("The string is the sequence of characters, and may relate to star wars: " + s);
+		}
+		write (str);
+	}
+	string1 = "";
+	string2 = "a";
+	string3 = "return to dagobah for training";
+	
+	checkLength(string1);
+	checkLength(string2);
+	checkLength(string3);
+}

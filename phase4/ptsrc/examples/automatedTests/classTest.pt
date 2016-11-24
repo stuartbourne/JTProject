@@ -1,0 +1,6 @@
+program classTest () 
+{
+	class c {
+
+	}
+}

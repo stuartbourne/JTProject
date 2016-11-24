@@ -1,0 +1,19 @@
+program functionTest(output)
+{
+	var i : integer;
+
+	public function checkIfThree( var j : integer)
+	{
+		if (j == 3)
+		{
+			write ("supplied number is three");
+		}
+		else
+		{
+			write ("supplied number is not three");
+		}
+	}
+	i = 5;
+	checkIfThree(i);
+
+}

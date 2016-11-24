@@ -1,0 +1,5 @@
+program p (output) {
+
+	var a:integer;
+	a = 2;
+}

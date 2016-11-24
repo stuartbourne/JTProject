@@ -1,0 +1,6 @@
+program P(output)
+{
+	let c = 27;
+	var v: string;
+	type t: integer;
+}

@@ -1,0 +1,48 @@
+Input for oldComment1.pt: 
+
+ [ (lLeftBrace)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lLetter)
+  [ (lBlank)
+ [ (lBlank)
+ [ (lRightBrace)
+ [ (lNewLine)
+ [ (lEndFile)
+
+
+Emitted tokens for oldComment1.pt: 
+
+ .pLeftBrace
+  .pIdentifier
+  .pIdentifier
+  .pIdentifier
+  .pIdentifier
+  .pIdentifier
+ .pRightBrace
+ .pNewLine
+ .pEndFile

@@ -1,0 +1,9 @@
+Emitted tokens for testProgram.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+

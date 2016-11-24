@@ -1,0 +1,2 @@
+line 7: illegal character - deleted line 7: syntax error at: 2 line 11: syntax error at: else line 16: syntax error at: break line 16: extraneous program text - ignored
+

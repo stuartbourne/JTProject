@@ -1,0 +1,9 @@
+Emitted tokens for doubleEquals.pt: 
+
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+   .sBegin
+   .sEnd
+
+
